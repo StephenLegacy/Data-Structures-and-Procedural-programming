@@ -1,0 +1,21 @@
+Algorithm: SumOfDistinctENumbers(arr1, arr2)
+    
+BEGIN
+    distinct_elements ← []
+
+    // Step 2: Combine both arrays into one
+    combined_array ← arr1 + arr2
+
+    // Step 3: Find numbers in both arrays
+    for each element x in combined_array do
+        if x is not in distinct_elements then
+            add x to distinct_elements
+        end if
+    end for
+
+    // Step 4: Sum the distinct elements
+    sum_of_distinct ← sum(distinct_elements)
+
+    // Step 5: Return the result
+    return sum_of_distinct
+END

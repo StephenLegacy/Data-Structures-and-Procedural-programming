@@ -1,0 +1,28 @@
+Algorithm: DotProductAndOrthogonalityCheck
+
+BEGIN
+
+Procedure dot_product(v1, v2)
+    Initialize ps = 0
+    For i = 0 to length(v1) - 1 do
+        ps = ps + v1[i] * v2[i]
+    End For
+    Return ps
+
+Procedure areOrthogonal(v1, v2)
+    dotProd = dot_product(v1, v2)
+    If dotProd == 0 then
+        Return true
+    Else
+        Return false
+    End If
+
+Procedure checkOrthogonalityForPairs(pairs)
+    For each pair (v1, v2) in pairs do
+        If areOrthogonal(v1, v2) then
+            Print "Vectors v1 and v2 are orthogonal."
+        Else
+            Print "Vectors v1 and v2 are not orthogonal."
+        End If
+    End For
+END
